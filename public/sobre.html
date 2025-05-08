@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre 808z</title>
+    <link rel="stylesheet" href="css/sobre.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Cabeçalho com navbar fixa -->
+    <header class="header">
+      <div class="container header-container">
+        <h1 class="logo">Obs33rd 808z</h1>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="Grupos.html">Comunidade</a></li>
+            <li><a href="allys.html">Alianças</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Seção Hero com botão 'Saiba Mais' -->
+    <section class="hero" id="inicio">
+      <div class="container">
+        <h2>Leia</h2>
+        <p>
+          Bom, primeiro agradeço a todos que nos acompanharam até hoje — tanto nos nossos grupos quanto na nossa comunidade. Sou muito grato a vocês. Se quiser saber mais, clique no botão azul abaixo:
+        </p>
+        <!-- Botão para revelar o conteúdo adicional -->
+        <button id="toggleSaibaMais" class="btn">Saiba Mais</button>
+        <!-- Conteúdo oculto inicialmente; sem margem que reserve espaço -->
+        <div id="saibaMaisContent" class="hidden-content">
+          <p>
+            Bom, em meio a não ter o que fazer, resolvi criar esse mini site para tentar evoluir um pouco nessa web, que só se ve fofocas, brigas e conteúdos fúteis. Obs33rd 808z foi – e talvez seja – meu último projeto na web. Por isso, agradeço a todos que nos acompanharam e apoiaram. (Isso nao é uma nota de kitamento rlx, tem muito por vir ainda.. Ass: shokito)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Créditos (ficará como a última seção antes do rodapé) -->
+    <section id="contato" class="section">
+      <div class="container">
+        <h2>Créditos</h2>
+        <p>Created By Shook'zXy: <p>
+  <a href="https://api.whatsapp.com/send?phone=554599538599" target="_blank" class="btn-whatsapp">Chama ae random</a></p>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Obs33rd 800z. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <!-- Script para controlar a exibição do conteúdo "Saiba Mais" -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggleButton = document.getElementById("toggleSaibaMais");
+        const saibaMaisContent = document.getElementById("saibaMaisContent");
+
+        toggleButton.addEventListener("click", () => {
+          // Alterna a classe "show", que controla a exibição do conteúdo
+          if (saibaMaisContent.classList.contains("show")) {
+            saibaMaisContent.classList.remove("show");
+            toggleButton.textContent = "Saiba Mais";
+          } else {
+            saibaMaisContent.classList.add("show");
+            toggleButton.textContent = "Fechar";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

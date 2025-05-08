@@ -1,0 +1,203 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1f1f1f, #121212);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo do cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.main-title {
+    font-size: 3rem;
+    color: #cccccc;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+/* Botão de voltar para Home */
+.back-home-button {
+    position: fixed; /* Alterado para fixed para manter o botão no canto superior direito */
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+.back-home-button:hover {
+    background: linear-gradient(135deg, #218838, #28a745);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.back-home-button:active {
+    transform: translateY(0);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção de allys */
+#allys {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ally {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.ally h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.ally p {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+/* Botões das allys */
+.ally-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.ally-button:hover {
+    background: linear-gradient(135deg, #0056b3, #007BFF);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ally-button:active {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de contato no WhatsApp */
+.contact-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-button:hover {
+    background: linear-gradient(135deg, #128C7E, #25D366);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact-button:active {
+    transform: translateY(0);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção de contato */
+#contato {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#contato h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+#contato p {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #1f1f1f;
+    color: #cccccc;
+    font-size: 0.9rem;
+    border-top: 2px solid #333333;
+}

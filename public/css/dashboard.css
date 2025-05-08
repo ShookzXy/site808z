@@ -1,0 +1,207 @@
+/* =================================
+   Reset e Estilos Globais
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Fundo dark */
+  color: #e0e0e0;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeInBody 1s ease-in forwards;
+}
+
+@keyframes fadeInBody {
+  to {
+    opacity: 1;
+  }
+}
+
+/* =================================
+   Top Banner (Admins 808z)
+================================= */
+.top-banner {
+  width: 100%;
+  background-color: #1f1f1f;
+  padding: 10px 20px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+  opacity: 0;
+  animation: fadeInBanner 1s ease-in forwards;
+}
+
+@keyframes fadeInBanner {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.top-banner h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #e0e0e0;
+}
+
+/* =================================
+   Header (Painel 808z) - Alinhado à Esquerda
+================================= */
+header {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  animation: fadeInHeader 1s ease-in forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+header .titulo {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #e0e0e0;
+}
+
+/* =================================
+   Container e Layout
+================================= */
+.container {
+  display: flex;
+  min-height: calc(100vh - 140px); /* Ajusta considerando o top-banner e header */
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =================================
+   Sidebar
+================================= */
+.sidebar {
+  background-color: #1c1c1c;
+  width: 250px;
+  padding: 20px;
+  border-right: 1px solid #333;
+}
+
+.sidebar h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #e0e0e0;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+/* =================================
+   Botões com Efeito Suave (para <button> e <a>)
+================================= */
+.botao,
+a.botao {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  background-color: #212121;
+  color: #e0e0e0;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  animation: fadeInButton 0.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInButton {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.botao:hover,
+a.botao:hover {
+  background-color: #424242;
+  border-color: #555;
+  transform: scale(1.05);
+}
+
+.botao:active,
+a.botao:active {
+  background-color: #171717;
+  border-color: #666;
+  transform: scale(0.98);
+}
+
+/* Botão Específico de Sair */
+.botao.sair,
+a.botao.sair {
+  background-color: #b71c1c;
+  border-color: #c62828;
+  color: #fff;
+  animation-delay: 0.6s;
+}
+
+.botao.sair:hover,
+a.botao.sair:hover {
+  background-color: #d32f2f;
+  border-color: #e53935;
+  transform: scale(1.05);
+}
+
+.botao.sair:active,
+a.botao.sair:active {
+  background-color: #880e4f;
+  border-color: #ad1457;
+  transform: scale(0.98);
+}
+
+/* =================================
+   Responsividade
+================================= */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #333;
+  }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupos</title>
+    <link rel="stylesheet" href="css/grupos.css">
+     <link rel="stylesheet" href="css/sobre.css" />
+    <link rel="icon" href="images/favicon.jpg" type="image/jpeg">
+  </head>
+  <body>
+    <!-- Cabeçalho com navbar fixa -->
+    <header class="header">
+      <div class="container header-container">
+        <h1 class="logo">Obs33rd 808z</h1>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="Grupos.html">Comunidade</a></li>
+            <li><a href="allys.html">Alianças</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <!-- Cabeçalho secundário para a página dos Grupos -->
+    <div class="page-header">
+      <h1 class="main-title">Nossos Grupos</h1>
+      <p class="description">Explore os grupos disponíveis e conecte-se com nossa comunidade.</p>
+    </div>
+
+    <main>
+      <section id="grupos">
+        <div class="group">
+          <h2>#Chat 808z</h2>
+          <p>Entre no nosso chat, temos bot 24hrs on.</p>
+          <a href="https://chat.whatsapp.com/EDIJAee80uG5xPABBS9FHK" target="_blank" class="group-button ripple-btn">
+            Entrar no Grupo
+          </a>
+        </div>
+        <div class="group">
+          <h2>#Girls 808z</h2>
+          <p>Entre no nosso recrutamento girls, apenas meninas.</p>
+          <a href="https://chat.whatsapp.com/LrWuklvhwViDLh83zH9X8c" target="_blank" class="group-button ripple-btn">
+            Entrar no Grupo
+          </a>
+        </div>
+        <div class="group">
+          <h2>#Channel 808z</h2>
+          <p>Acompanhe nossa comunidade, sorteio de números semanalmente.</p>
+          <a href="https://whatsapp.com/channel/0029VazNnYs4IBhKRsU3qg2P" target="_blank" class="group-button ripple-btn">
+            Entrar no Grupo
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 808z. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- JavaScript para criar o efeito ripple -->
+    <script>
+      document.querySelectorAll('.ripple-btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+          // Remove o ripple existente, se houver
+          const existingRipple = this.querySelector('.ripple-effect');
+          if (existingRipple) {
+            existingRipple.remove();
+          }
+          
+          // Cria um elemento <span> que atuará como o efeito ripple
+          const ripple = document.createElement('span');
+          ripple.className = 'ripple-effect';
+          
+          // Define o tamanho do ripple para que cubra todo o botão
+          const rect = this.getBoundingClientRect();
+          const size = Math.max(rect.width, rect.height);
+          ripple.style.width = ripple.style.height = size + 'px';
+          
+          // Posiciona o ripple baseado na posição do clique
+          ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+          ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+          
+          // Adiciona o ripple ao botão
+          this.appendChild(ripple);
+        });
+      });
+    </script>
+  </body>
+</html>

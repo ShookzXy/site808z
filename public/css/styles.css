@@ -1,0 +1,546 @@
+/* Efeito de entrada para a página */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1f1f1f, #121212);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo do cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-title {
+    font-size: 3rem;
+    color: #cccccc;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sub-title {
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Linha separadora */
+.separator {
+    border: none;
+    border-top: 2px solid #cccccc;
+    width: 50%;
+    margin: 10px auto;
+    opacity: 0.8;
+}
+
+/* Botões principais */
+button, .cta-button {
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+button:hover, .cta-button:hover {
+    background: linear-gradient(135deg, #0056b3, #007BFF);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active, .cta-button:active {
+    transform: translateY(0);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção de contato */
+#contato {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+button {
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #007BFF);
+    transform: translateY(-5px) scale(1.05); /* Eleva e aumenta o botão */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(0) scale(1); /* Volta ao normal ao clicar */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção de ferramentas */
+#ferramentas {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#ferramentas .tools {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#ferramentas .tool {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    text-align: center;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#ferramentas .tool h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+#ferramentas .tool p {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+#ferramentas .tool .button {
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#ferramentas .tool .button:hover {
+    background: linear-gradient(135deg, #218838, #28a745);
+    transform: translateY(-3px) scale(1.1); /* Eleva e aumenta o botão */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+#ferramentas .tool .button:active {
+    transform: translateY(0) scale(1); /* Volta ao normal ao clicar */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para os botões de informações */
+.info-button {
+    position: relative;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #ffffff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    overflow: hidden;
+}
+
+.info-button .icon {
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-button:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.info-button:active {
+    transform: translateY(0);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Tooltip para informações adicionais */
+.info-button .tooltip {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+.info-button:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #1f1f1f;
+    color: #cccccc;
+    font-size: 0.9rem;
+    border-top: 2px solid #333333;
+}
+
+/* Seção Sobre Nós */
+#sobre {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#sobre h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+#sobre p {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+/* Seção Destaques */
+#destaques {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #1f1f1f, #121212);
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+#destaques h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.highlights {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.highlight-card {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.highlight-card h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.highlight-card p {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+.highlight-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.highlight-button:hover {
+    background: linear-gradient(135deg, #0056b3, #007BFF);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do menu */
+.menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.menu-button:hover {
+    transform: scale(1.1);
+}
+
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #1f1f1f;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+}
+
+.menu-dropdown .menu-item {
+    display: block;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s ease;
+}
+
+.menu-dropdown .menu-item:hover {
+    background: #333333;
+}
+
+/* Mostrar o menu ao clicar */
+.menu:hover .menu-dropdown {
+    display: block;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        margin-bottom: 20px;
+    }
+
+    .main-title {
+        font-size: 2rem; /* Reduz o tamanho do título principal */
+    }
+
+    .sub-title {
+        font-size: 1.5rem; /* Reduz o tamanho do subtítulo */
+    }
+
+    .separator {
+        width: 70%; /* Ajusta a largura da linha separadora */
+    }
+
+    .button-group {
+        flex-direction: column; /* Empilha os botões verticalmente */
+        gap: 10px;
+    }
+
+    button, .cta-button {
+        padding: 10px 20px; /* Reduz o tamanho dos botões */
+        font-size: 1rem;
+    }
+
+    #ferramentas .tools {
+        flex-direction: column; /* Empilha as ferramentas verticalmente */
+        gap: 15px;
+    }
+
+    #ferramentas .tool {
+        width: 100%; /* Faz as ferramentas ocuparem toda a largura */
+    }
+
+    #sobre {
+        margin: 20px 0;
+    }
+
+    #sobre h2 {
+        font-size: 1.5rem; /* Reduz o tamanho do título */
+    }
+
+    #sobre p {
+        font-size: 0.9rem; /* Reduz o tamanho do texto */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Reduz o tamanho do texto do rodapé */
+    }
+}
+
+/* Responsividade para telas muito pequenas (ex.: smartphones) */
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.8rem; /* Reduz ainda mais o título principal */
+    }
+
+    .sub-title {
+        font-size: 1.2rem; /* Reduz ainda mais o subtítulo */
+    }
+
+    .button-group {
+        gap: 8px; /* Reduz o espaçamento entre os botões */
+    }
+
+    button, .cta-button {
+        font-size: 0.9rem; /* Reduz o tamanho do texto dos botões */
+        padding: 8px 15px; /* Ajusta o padding dos botões */
+    }
+
+    #ferramentas .tool {
+        padding: 15px; /* Reduz o padding das ferramentas */
+    }
+
+    #ferramentas .tool h3 {
+        font-size: 1.2rem; /* Reduz o tamanho do título das ferramentas */
+    }
+
+    #ferramentas .tool p {
+        font-size: 0.8rem; /* Reduz o tamanho do texto das ferramentas */
+    }
+
+    #sobre h2 {
+        font-size: 1.2rem; /* Reduz o tamanho do título */
+    }
+
+    #sobre p {
+        font-size: 0.8rem; /* Reduz o tamanho do texto */
+    }
+}
+
+/* Tema claro */
+body.light-mode {
+    background: #ffffff; /* Fundo claro */
+    color: #000000; /* Texto escuro */
+}
+
+body.light-mode .highlight-card {
+    background: #f0f0f0; /* Fundo claro para os cartões */
+    color: #000000;
+}
+
+body.light-mode .highlight-button {
+    background: linear-gradient(135deg, #cccccc, #aaaaaa);
+    color: #000000;
+}
+
+/* Botão de alternar tema */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ffffff; /* Cor do ícone no modo escuro */
+    transition: color 0.3s ease;
+}
+
+body.light-mode .theme-toggle {
+    color: #000000; /* Cor do ícone no modo claro */
+}
+
+/* Adicione isso ao styles.css */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,341 @@
+/* Reset básico e configurações */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container centralizado */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Cabeçalho e Navbar */
+.header {
+  background-color: #1f1f1f;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1s ease-out;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: #007BFF;
+}
+
+/* Seção Hero */
+.hero {
+  background: url('../images/hero-background.jpg') center/cover no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 30px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Conteúdo oculto "Saiba Mais" */
+.hidden-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+  margin-top: 20px;
+}
+
+.hidden-content.show {
+  max-height: 300px; /* Ajuste conforme a quantidade de conteúdo */
+  opacity: 1;
+}
+
+/* Seções Gerais */
+.section {
+  padding: 60px 20px;
+  animation: fadeInUp 1s ease-out;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #1f1f1f;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-weight: 300; /* Peso leve para um visual elegante */
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  margin-bottom: 30px;
+}
+
+/* Estilo profissional para os títulos (h2) */
+h2 {
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Fonte moderna e legível */
+  font-size: 2.2rem;                /* Tamanho expressivo, mas elegante */
+  font-weight: 600;                 /* Peso que ressalta o título */
+  color: #e0e0e0;                   /* Cor clara para contraste no dark mode */
+  letter-spacing: 1px;              /* Espaçamento entre letras para um visual mais clean */
+  text-transform: uppercase;        /* Opcional: transforma o título em caixa alta para dar ênfase */
+  padding-bottom: 0.5rem;           /* Espaço inferior para conforto visual */
+  border-bottom: 2px solid #007BFF; /* Linha sutil de destaque no tom de azul */
+  margin-bottom: 1.5rem;            /* Espaçamento inferior para separar do conteúdo seguinte */
+  transition: color 0.3s ease;      /* Efeito suave ao alterar a cor no hover */
+}
+
+h2:hover {
+  color: #007BFF;                   /* Altera a cor do texto quando o usuário passa o mouse sobre o título */
+}
+
+/* Estilo profissional para parágrafos (p) */
+p {
+  font-family: 'Georgia', serif;  /* Fonte clássica e legível para textos corridos */
+  font-size: 1.1rem;               /* Tamanho de fonte confortável para leitura */
+  line-height: 1.7;                /* Altura de linha que melhora a legibilidade */
+  color: #cccccc;                 /* Tom levemente cinza para suavizar o contraste sem perder a leitura */
+  margin-bottom: 1.5rem;           /* Espaçamento inferior para separar os parágrafos */
+}
+
+/* Reset básico e configurações */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Container centralizado */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Cabeçalho e Navbar */
+.header {
+  background-color: #1f1f1f;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #e0e0e0;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: #007BFF;
+}
+
+/* Seção Hero */
+.hero {
+  background: url('../images/hero-background.jpg') center/cover no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+/* Botão padrão */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Conteúdo oculto que não reserva espaço quando escondido */
+.hidden-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+  /* Remova margens extras para que não haja espaçamento quando oculto */
+}
+
+.hidden-content.show {
+  max-height: 500px; /* Ajuste conforme o tamanho necessário */
+  opacity: 1;
+}
+
+/* Seções Gerais (Créditos e outras) */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #1f1f1f;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #25D366; /* Cor característica do WhatsApp */
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-left: 8px;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe57;
+  transform: scale(1.05);
+}
+

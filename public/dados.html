@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seus Dados - 808z</title>
+    <link rel="stylesheet" href="css/dados.css" />
+    <!-- Adicione os scripts do Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth-compat.js"></script>
+    <!-- Configuração do Firebase (substitua pelos seus dados de configuração) -->
+    <script>
+  const firebaseConfig = {
+  apiKey: "AIzaSyBGPdrp6vvervIs7M7F-Yx4D8_v5UR-uTk",
+  authDomain: "zauth-86d37.firebaseapp.com",
+  projectId: "zauth-86d37",
+  storageBucket: "zauth-86d37.firebasestorage.app",
+  messagingSenderId: "241391307891",
+  appId: "1:241391307891:web:1f39b648397cded640ae06",
+  measurementId: "G-MHPLT09XK1"
+};
+      firebase.initializeApp(firebaseConfig);
+    </script>
+  </head>
+  <body>
+    <div class="dados-container">
+      <header class="dados-header">
+        <h1>Dados do Usuário</h1>
+      </header>
+      <section class="dados-panel">
+        <div class="dados-info">
+          <p>
+            <span class="label">Email:</span>
+            <span id="email">Carregando...</span>
+          </p>
+          <p>
+            <span class="label">Senha:</span>
+            <span id="senha">********</span>
+          </p>
+          <p>
+            <span class="label">IP:</span>
+            <span id="ip">Carregando...</span>
+          </p>
+          <p>
+            <span class="label">Navegador:</span>
+            <span id="browser">Carregando...</span>
+          </p>
+          <p>
+            <span class="label">Dispositivo:</span>
+            <span id="device">Carregando...</span>
+          </p>
+        </div>
+        <div class="dados-buttons">
+          <button class="botao" id="refresh">Atualizar Dados</button>
+          <button class="botao" id="voltar" onclick="window.location.href='dashboard.html'">Voltar</button>
+        </div>
+      </section>
+    </div>
+    <!-- Ajuste o caminho se necessário -->
+    <script src="js/dados.js"></script>
+  </body>
+</html>

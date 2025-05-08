@@ -1,0 +1,205 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Inter', sans-serif;
+    background: #121212; /* Cinza escuro ao invés de preto puro */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container do login */
+.login-container {
+    background: #1a1a1a; /* Cinza escuro elegante */
+    padding: 28px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    border: 1px solid #3f71ff; /* Contorno azul suave */
+    box-shadow: 0px 4px 12px rgba(63, 113, 255, 0.2); /* Sombra sutil */
+}
+
+/* Título */
+.login-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #3f71ff; /* Azul profissional */
+    margin-bottom: 10px;
+}
+
+/* Subtítulo */
+.login-subtitle {
+    font-size: 15px;
+    color: #aaa; /* Cinza suave */
+    margin-bottom: 20px;
+}
+
+/* Campos de entrada */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    background: #242424; /* Fundo mais neutro */
+    border: 1px solid #3f71ff;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+}
+
+input::placeholder {
+    color: #888;
+}
+
+input:focus {
+    outline: none;
+    border-color: #5a8bff;
+    box-shadow: 0px 0px 8px rgba(63, 113, 255, 0.3);
+}
+
+/* Botão */
+button {
+    background-color: #3f71ff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #5a8bff;
+    box-shadow: 0px 0px 8px rgba(63, 113, 255, 0.4);
+}
+
+/* Ajuste suave no container */
+.login-container {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Importando fonte */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+/* Estilos Gerais */
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0a0a; /* Dark refinado */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container do login */
+.login-container {
+    background: #1a1a1a; /* Cinza escuro */
+    padding: 30px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    border: 1px solid rgba(63, 113, 255, 0.6); /* Azul refinado */
+    box-shadow: 0px 6px 14px rgba(63, 113, 255, 0.15); /* Sombra sutil */
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Título */
+.login-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #3f71ff;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: slideIn 0.8s ease-in-out 0.3s forwards;
+}
+
+/* Subtítulo */
+.login-subtitle {
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideIn 0.8s ease-in-out 0.5s forwards;
+}
+
+/* Campos de entrada */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: #242424;
+    border: 1px solid #3f71ff;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #5a8bff;
+    box-shadow: 0px 0px 10px rgba(63, 113, 255, 0.3);
+}
+
+/* Botão */
+button {
+    background-color: #3f71ff;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+    opacity: 0;
+    animation: slideUp 0.8s ease-in-out 0.7s forwards;
+}
+
+button:hover {
+    background-color: #5a8bff;
+    box-shadow: 0px 0px 10px rgba(63, 113, 255, 0.3);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Importando fonte */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
